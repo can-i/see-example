@@ -8,15 +8,17 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-const Controller_1 = require("can-i/Controller");
-const Route_1 = require("can-i/Route/Route");
-let UserController = class UserController extends Controller_1.BaseController {
-    create() {
+const ModelService_1 = require("./ModelService");
+const IOC_1 = require('can-i/IOC');
+let UserService = class UserService extends ModelService_1.ModelService {
+    constructor() {
+        super();
+        this.name = "user";
     }
 };
-UserController = __decorate([
-    Route_1.Route("/user"), 
+UserService = __decorate([
+    IOC_1.Injectable, 
     __metadata('design:paramtypes', [])
-], UserController);
-exports.UserController = UserController;
-//# sourceMappingURL=UserController.js.map
+], UserService);
+exports.UserService = UserService;
+//# sourceMappingURL=UserService.js.map

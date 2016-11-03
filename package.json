@@ -9,6 +9,17 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.14.0"
+    "@types/body-parser": "^0.0.33",
+    "@types/lodash": "^4.14.38",
+    "@types/mocha": "^2.2.32",
+    "@types/superagent": "^2.0.35",
+    "body-parser": "^1.15.2",
+    "lodash": "^4.16.6",
+    "must": "^0.13.2",
+    "superagent": "^2.3.0"
+  },
+  "devDependencies": {
+    "@types/body-parser": "^0.0.33",
+    "@types/lodash": "^4.14.38"
   }
 }
