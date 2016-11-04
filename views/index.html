@@ -4,7 +4,19 @@
 </head>
 
 <body>
-    <form action="/user">
+    <form action="/user/create" method="POST">
+        <section>
+            <label for="">Firstname</label>
+            <br/>
+            <input type="text" name="firstname">
+        </section>
+        <section>
+            <label for="">Lastname</label>
+            <br/>
+            <input type="text" name="lastname">
+        </section>
+
+        <button type="submit">Submit</button>
     </form>
 </body>
 

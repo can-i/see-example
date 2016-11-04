@@ -27,7 +27,7 @@ let UserController = class UserController extends Controller_1.BaseController {
     create() {
         try {
             this.userservice.Create(this.body);
-            this.completed(this.body);
+            this.res.redirect("/user/all");
         }
         catch (e) {
             console.log(e);
@@ -37,6 +37,9 @@ let UserController = class UserController extends Controller_1.BaseController {
     find() {
         let users = this.userservice.Find(this.body.id);
         this.completed(users);
+    }
+    getAll() {
+        this.completed(this.userservice.collection);
     }
     update() {
         let users = this.userservice.Update(this.body.filter, this.body.update);
@@ -72,6 +75,12 @@ __decorate([
     __metadata('design:paramtypes', []), 
     __metadata('design:returntype', void 0)
 ], UserController.prototype, "find", null);
+__decorate([
+    Method_1.Get("/all"), 
+    __metadata('design:type', Function), 
+    __metadata('design:paramtypes', []), 
+    __metadata('design:returntype', void 0)
+], UserController.prototype, "getAll", null);
 __decorate([
     Method_1.Post("/update"), 
     __metadata('design:type', Function), 

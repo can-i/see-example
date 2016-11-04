@@ -31,9 +31,8 @@ export class UserController extends BaseController {
     @Post("/create")
     public create() {
         try {
-
             this.userservice.Create(this.body);
-            this.completed(this.body);
+            this.res.redirect("/user/all")
         } catch (e) { 
             console.log(e);
             throw e;
@@ -44,6 +43,12 @@ export class UserController extends BaseController {
     public find() {
         let users = this.userservice.Find(this.body.id);
         this.completed(users);
+    }
+
+
+    @Get("/all")
+    public getAll(){
+        this.completed(this.userservice.collection);
     }
 
 

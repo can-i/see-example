@@ -6,4 +6,4 @@ import bodyparser = require("body-parser");
 
 
 
-export let UserApi = Stack(bodyparser.json());
+export let UserApi = Stack(bodyparser.json(),bodyparser.urlencoded({extended:true}));
