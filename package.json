@@ -14,9 +14,13 @@
     "@types/mocha": "^2.2.32",
     "@types/superagent": "^2.0.35",
     "body-parser": "^1.15.2",
+    "can-i": "https://github.com/can-i/can-i-JS.git#master",
+    "consolidate": "^0.14.1",
     "lodash": "^4.16.6",
     "must": "^0.13.2",
-    "superagent": "^2.3.0"
+    "source-map-support": "^0.4.6",
+    "superagent": "^2.3.0",
+    "vash": "^0.12.2"
   },
   "devDependencies": {
     "@types/body-parser": "^0.0.33",

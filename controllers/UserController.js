@@ -14,11 +14,15 @@ const Route_1 = require("can-i/Route/Route");
 const UserService_1 = require('../services/UserService');
 const middleware_1 = require('../Middleware/middleware');
 const Middleware_1 = require("can-i/Middleware");
+const View_1 = require("can-i/Utility/View");
 let _ = require("lodash");
 let UserController = class UserController extends Controller_1.BaseController {
     constructor(userservice) {
         super();
         this.userservice = userservice;
+    }
+    main() {
+        this.send({});
     }
     create() {
         try {
@@ -49,6 +53,13 @@ let UserController = class UserController extends Controller_1.BaseController {
         });
     }
 };
+__decorate([
+    View_1.View("index"),
+    Method_1.Get(""), 
+    __metadata('design:type', Function), 
+    __metadata('design:paramtypes', []), 
+    __metadata('design:returntype', void 0)
+], UserController.prototype, "main", null);
 __decorate([
     Method_1.Post("/create"), 
     __metadata('design:type', Function), 

@@ -6,6 +6,8 @@ import { UserService } from '../services/UserService';
 import { Stack } from "can-i/Middleware";
 import { UserApi } from '../Middleware/middleware';
 import { MiddleWare } from "can-i/Middleware";
+
+import {View} from "can-i/Utility/View";
 let _ = require("lodash");
 
 
@@ -18,6 +20,13 @@ export class UserController extends BaseController {
     constructor(public userservice: UserService) {
         super()
     }
+
+    @View("index")
+    @Get("")
+    public main(){
+        this.send({});
+    }
+    
 
     @Post("/create")
     public create() {
